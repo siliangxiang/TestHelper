@@ -150,9 +150,9 @@ const newQuizPayload = (name, owner) => ({
 
 export const assertOwnsQuiz = (email, quizId) => quizLock((resolve, reject) => {
   if (!(quizId in quizzes)) {
-    reject(new InputError('Invalid quiz ID'));
+    reject(new InputError('不合法的试卷Id'));
   } else if (quizzes[quizId].owner !== email) {
-    reject(new InputError('Admin does not own this Quiz'));
+    reject(new InputError('该试卷不属于当前登录用户'));
   } else {
     resolve();
   }
