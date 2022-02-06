@@ -100,7 +100,7 @@ class testPaperQuestionsShow extends Component {
           >
             <div>
               <button>修改这道题目</button>
-              <button>删除这道题目</button>
+              {/* <button>删除这道题目</button> */}
               <button>返回</button>
             </div>
           </div>
