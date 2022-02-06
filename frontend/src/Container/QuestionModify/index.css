@@ -119,7 +119,7 @@
 .questionDetails > .questionContent > .materialContent > .addPicture > :first-child,
 .questionDetails > .questionContent > .materialContent > .addVideo > :first-child{
   box-sizing: border-box;
-  width: 250px;
+  width: 500px;
   height: 250px;
   margin: 0px 100px;
   border: solid 1px black;
@@ -146,6 +146,7 @@
   height: 30px;
   text-align: center;
   line-height: 30px;
+  font-size: 15px;
 }
 
 .questionDetails > .questionContent > .materialContent > .addPicture > :last-child > input{
@@ -154,7 +155,7 @@
 
 /* 配置辅助材料区 */ /* 添加视频部分（一部分样式在添加图片里） */
 .questionDetails > .questionContent > .materialContent > .addVideo > :first-child{
-  width: 370px;
+  width: 500px;
 }
 
 .questionDetails > .questionContent > .materialContent > .addVideo > :first-child > iframe{
@@ -163,7 +164,7 @@
 }
 
 .questionDetails > .questionContent > .materialContent > .addVideo > :last-child{
-  width: 400px;
+  width: 500px;
 }
 
 /* 配置选项区 */

@@ -57,10 +57,10 @@ class QuestionModify extends Component {
       const reader = new FileReader();
       reader.onload = e => {
         const { result } = e.target;
-        if (result.indexOf('img') > -1 || result.indexOf('imag') > -1) {
+        if (!result.slice(5).indexOf('img') || !result.slice(5).indexOf('image')) {
           questionInfo.material.content = e.target.result;
+          this.setState({ questionInfo });
         } else return showImportantMessage('请选择图片文件');
-        this.setState({ questionInfo });
       }
       return reader.readAsDataURL(files[0]);
     } else if (name === 'videoIframe') {

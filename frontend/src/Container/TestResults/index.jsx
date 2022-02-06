@@ -52,7 +52,7 @@ class TestResults extends Component {
     ]).sort((a, b) => b[1] - a[1] ? b[1] - a[1] : a[2] - b[2]);
     const allAvgInfo = range.reduce((pre, e) => // 利用排名统计总平均分和总耗时(毫秒)
       [pre[0] + e[1], pre[1] + e[2]]
-    , [0, 0]).map(e => e / range.length);
+    , [0, 0]).map(e => Math.round(e / range.length));
     const [allExamineesAverageScore, allExamineesAverageTimeCost] = allAvgInfo;
     const eachQuestionInfo = rawQuestions.map((_, questionI) => // 统计每个问题的信息
       rawResults.reduce((pre, e) => [
@@ -66,24 +66,29 @@ class TestResults extends Component {
     correctGraph.setOption({
       title: { text: '每题正确率' },
       tooltip: {},
-      legend: { data: ['正确率'] },
+      // legend: { data: ['正确率'] },
       xAxis: { max: 1 },
-      yAxis: { data: eachQuestionCorrectRate.map((_, i) => `第${i + 1}题`) },
-      series: [{ name: '正确率', type: 'bar', data: eachQuestionCorrectRate, barWidth: '30px' }]
+      yAxis: { data: eachQuestionCorrectRate.map((_, i) => `第${i + 1}题`).reverse() },
+      series: [{
+        name: '正确率',
+        type: 'bar',
+        data: eachQuestionCorrectRate.reverse(),
+        barWidth: '30px'
+      }]
     });
     correctGraph.resize({ height: `${60 * rawQuestions.length + 130}px` });
     const timeCostGraph = echarts.init(this.eachQuestionAvgTimeCostBarGraph); // 画耗时柱状图
     timeCostGraph.setOption({
       title: { text: '每题平均花费时间（单位：分钟）' },
       tooltip: {},
-      legend: { data: ['平均花费时间（单位：分钟）'] },
+      // legend: { data: ['平均花费时间（单位：分钟）'] },
       xAxis: {},
-      yAxis: { data: eachQuestionAverageTimeCost.map((_, i) => `第${i + 1}题`) },
+      yAxis: { data: eachQuestionAverageTimeCost.map((_, i) => `第${i + 1}题`).reverse() },
       series: [{
         name: '平均花费时间（单位：分钟）',
         type: 'bar',
         barWidth: '30px',
-        data: eachQuestionAverageTimeCost
+        data: eachQuestionAverageTimeCost.reverse()
       }]
     })
     timeCostGraph.resize({ height: `${60 * rawQuestions.length + 130}px` });
