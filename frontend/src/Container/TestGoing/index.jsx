@@ -147,7 +147,7 @@ class TestGoing extends Component {
   componentDidUpdate () {
     if (!this.state.question.material) return;
     const { category, content } = this.state.question.material;
-    if (category === 'video') this.materialShow.innerHTML = content;
+    if (category === 'video' && !this.materialShow.innerHTML) this.materialShow.innerHTML = content;
   }
 
   componentWillUnmount () { clearInterval(this.timeCountDown); if (this.ws) this.ws.close(); }
