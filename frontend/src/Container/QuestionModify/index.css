@@ -1,0 +1,194 @@
+.questionDetails{
+  width: 800px;
+  margin: 20px auto 0px;
+  border: solid black 1px;
+}
+
+/* 配置头部 */
+.questionDetails > .head{
+  display: flex;
+  margin: 0px auto 0px;
+  border-bottom: solid black 1px;
+}
+
+.questionDetails > .head > div{
+  flex-grow: 1;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.questionDetails > .head > div:hover{
+  color: red !important;
+}
+
+/* 配置问题属性div */
+.questionDetails > .questionProperties{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  height: 520px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.questionDetails > .questionProperties > div{
+  display: flex;
+  width: 600px;
+  height: 50px;
+}
+
+.questionDetails > .questionProperties > div > *{
+  box-sizing: border-box;
+  width: 300px;
+  margin: 0px 10px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.questionDetails > .questionProperties > div > :not(.title){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.questionDetails > .questionProperties > div > :not(.title) > *{
+  float: right;
+  box-sizing: border-box;
+  width: 200px;
+  height: 28px;
+  border: 1px solid rgb(118, 118, 118);
+}
+
+.questionDetails > .questionProperties > div > :not(.title) option{
+  text-align: center;
+}
+
+/* 配置题干区，选项区和辅助材料区 */
+/* 配置所有区的标题 */
+.questionDetails > .questionContent > div > .title{
+  width: 800px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+/* 配置题干输入区域 */
+.questionDetails > .questionContent > :first-child{
+  height: 180px;
+}
+
+.questionDetails > .questionContent > :first-child > *{
+  display: block;
+  margin: 30px auto 0px;
+}
+
+.questionDetails > .questionContent .questionBody{
+  box-sizing: border-box;
+  width: 500px;
+  height: 80px;
+  resize: none;
+}
+
+/* 配置辅助材料区 */
+.questionDetails > .questionContent > .materialContent{
+  height: 440px;
+}
+
+.questionDetails > .questionContent > :nth-child(2),
+.questionDetails > .questionContent > .materialContent > div:not(.title){
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+/* 配置辅助材料区 */ /* 添加图片部分 */
+.questionDetails > .questionContent > .materialContent > .addPicture,
+.questionDetails > .questionContent > .materialContent > .addVideo{
+  align-content: space-between !important;
+  height: 310px !important;
+}
+
+.questionDetails > .questionContent > .materialContent > .addPicture > :first-child,
+.questionDetails > .questionContent > .materialContent > .addVideo > :first-child{
+  box-sizing: border-box;
+  width: 250px;
+  height: 250px;
+  margin: 0px 100px;
+  border: solid 1px black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.questionDetails > .questionContent > .materialContent > .addPicture > :last-child,
+.questionDetails > .questionContent > .materialContent > .addVideo > :last-child{
+  box-sizing: border-box;
+  position: relative;
+  width: 200px;
+  height: 30px;
+  margin: 0px 200px;
+  border: solid 1px black;
+}
+
+.questionDetails > .questionContent > .materialContent > .addPicture > :last-child > *{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.questionDetails > .questionContent > .materialContent > .addPicture > :last-child > input{
+  opacity: 0;
+}
+
+/* 配置辅助材料区 */ /* 添加视频部分（一部分样式在添加图片里） */
+.questionDetails > .questionContent > .materialContent > .addVideo > :first-child{
+  width: 370px;
+}
+
+.questionDetails > .questionContent > .materialContent > .addVideo > :first-child > iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.questionDetails > .questionContent > .materialContent > .addVideo > :last-child{
+  width: 400px;
+}
+
+/* 配置选项区 */
+.questionDetails > .questionContent > :last-child > *{
+  margin: 0px auto 30px;
+}
+
+.questionDetails > .questionContent .choice{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 700px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.questionDetails > .questionContent .choice > input[name = choice]{
+  box-sizing: border-box;
+  width: 500px;
+  height: 28px;
+  border: solid 1px rgb(118, 118, 118);
+}
+
+.questionDetails > .questionContent .choice > input[name = answer]{
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+}

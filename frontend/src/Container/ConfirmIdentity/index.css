@@ -1,0 +1,89 @@
+.userInfo{
+  width: 300px;
+  margin: 85px auto;
+  border: solid black 1px;
+  background-color: transparent;
+}
+
+.userInfo > .changeUserIdentity{
+  display: flex;
+  height: 30px;
+  border-bottom: solid 1px black;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.userInfo > .changeUserIdentity > div{
+  flex-grow: 1;
+  text-align: center;
+}
+
+.userInfo > .changeUserIdentity > div:hover{
+  color: red !important;
+}
+
+.userInfo > .form{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-evenly;
+  height: 250px;
+}
+
+.userInfo > .form > *{
+  flex-basis: 250px;
+  box-sizing: border-box;
+  height: 25px;
+  background-color: transparent;
+  outline: none;
+  border: solid 1px black;
+}
+
+.userInfo > .form > button:hover{
+  color: white;
+  background-color: black;
+}
+
+.userInfo > .comment{
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.userInfo > .comment > span > span{
+  font-weight: bolder;
+}
+
+.userInfo > .comment > span > span:hover{
+  color: red;
+}
+
+@media screen and (max-width: 980px) {
+  .userInfo{
+    width: 300rem;
+    margin: 85rem auto;
+    border: solid black 1rem;
+  }
+  
+  .userInfo > .changeUserIdentity{
+    height: 30rem;
+    border-bottom: solid 1rem black;
+    font-size: 20rem;
+    line-height: 30rem;
+  }
+  
+  .userInfo > .form{
+    height: 250rem;
+  }
+  
+  .userInfo > .form > *{
+    flex-basis: 250rem;
+    height: 25rem;
+    border: solid 1rem black;
+    font-size: 13rem;
+  }
+  
+  .userInfo > .comment{
+    height: 30rem;
+    font-size: 15rem;
+  }
+}

@@ -1,0 +1,102 @@
+.questions > .question{
+  display: flex;
+  width: 740px;
+  height: 80px;
+  margin: 30px auto 0px;
+  border: solid 1px black;
+}
+
+.questions > :last-of-type.question{
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  line-height: 80px;
+  margin-bottom: 30px;
+  border: dashed 1px black;
+}
+
+.questions > .question:hover{
+  border: solid 1px black;
+  box-shadow: 0px 0px 3px black;
+}
+
+.questions > .question > .questionOrder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  font-size: 20px;
+}
+
+.questions > .question > .questionOrder{
+  width: 150px;
+}
+
+.questions > .question > .questionDetails{
+  position: relative;
+  width: 560px;
+  margin: 0px;
+  border: none;
+  font-size: 15px;
+}
+
+.questions > .question > .questionDetails > .questionName{
+  width: 550px;
+  height: 100%;
+  padding: 0px 0px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.questions > .question > .questionDetails > :last-child{
+  display: none;
+  position: absolute;
+  bottom: 5px;
+  right: -20px;
+  font-size: 13px;
+}
+
+.questions > .question:hover > .questionDetails > :last-child{
+  display: block;
+}
+
+/* 操作旧题目的面板 */
+.questions > .questionControlBoard{
+  position: fixed;
+  top: 0px;
+  width: 980px;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+.questions > .questionControlBoard > div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-evenly;
+  width: 300px;
+  height: 150px;
+  margin: 200px auto;
+  background-color: transparent;
+  border: 1px black solid;
+}
+
+.questions > .questionControlBoard > div > *{
+  box-sizing: border-box;
+  width: 250px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px black solid;
+  outline: none;
+}
+
+.questions > .questionControlBoard > div > *:hover{
+  color: white;
+  background-color: black;
+}

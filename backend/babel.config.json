@@ -1,0 +1,4 @@
+{
+  "comment": "作用：默认下加载ES2015以及其往后所有的babel预转换环境。",
+  "presets": ["@babel/preset-env"]
+}

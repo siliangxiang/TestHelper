@@ -1,0 +1,33 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    // 解析规则
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "standard"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    // 在react中使用eslint必须
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "linebreak-style": 0,
+        // 配置在哪些文件里可以使用jsx
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "semi": 0,
+        "comma-dangle": 0
+    },
+    // 解决有些babel代码eslint不支持的问题。
+    "parser": "babel-eslint"
+}

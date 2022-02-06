@@ -1,0 +1,78 @@
+.testResults{
+  width: 800px;
+  margin: 20px auto;
+  border: solid 1px black;
+}
+
+/* 结果展示的头部 */
+.testResults > .head{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border-bottom: solid black 1px;
+  font-size: 23px;
+}
+
+.testResults > .head > *{
+  width: 50%;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 0px;
+}
+
+.testResults > .head > *:first-child{
+  border-top-left-radius: 4px;
+}
+
+.testResults > .head > *:last-child{
+  border-top-right-radius: 4px;
+}
+
+.testResults > .head > *:hover{
+  color: red !important; 
+}
+
+/* 名次榜单 */
+.testResults > .range > *{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 30px;
+  margin: 30px auto;
+  font-size: 19px;
+}
+
+.testResults > .range > * > *{
+  text-align: center;
+}
+
+.testResults > .range > * > .order{
+  width: 14%;
+}
+
+.testResults > .range > * > .name{
+  width: 17%;
+}
+
+.testResults > .range > * > .score{
+  width: 14%;
+}
+
+.testResults > .range > * > .timeCost{
+  width: 29%;
+}
+
+/* 柱状图 */
+.eachQuestionInfo > *{
+  width: 750px;
+  margin: 30px auto;
+}
+
+/* 无人参加 */
+.testResults > .noExaminees{
+  margin: 150px auto;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+}

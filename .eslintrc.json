@@ -1,0 +1,35 @@
+{
+    // 配置我的脚本在哪里生效
+    "env": {
+        // 浏览器代码里生效
+        "browser": true,
+        // 语言版本为ES2021
+        "es2021": true
+    },
+    // 语法检查使用YAML格式
+    "extends": [
+        "standard"
+        // 后面还可以加很多别的检查格式，检查的时候会按
+        // 整个数组里各种要求都检查一遍。
+    ],
+    // 让ESlint默认按ES5解析，这里要更改
+    "parserOptions": {
+        // 明确语言版本
+        "ecmaVersion": 12,
+        // 若符合ecma官方模块，这里为module（默认script）
+        "sourceType": "module"
+    },
+    // 覆盖一部分规则
+    "rules": {
+        // 禁止尾随逗号 
+        "comma-dangle": ["error", {
+            "arrays": "always",
+            "objects": "always",
+            "imports": "always",
+            "exports": "always",
+            "functions": "never"
+        }],
+        // 强制各种表达式分号结尾
+        "semi": ["error", "always"]
+    }
+}

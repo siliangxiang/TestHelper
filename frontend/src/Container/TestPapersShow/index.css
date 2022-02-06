@@ -1,0 +1,135 @@
+.testPapersBoards > .testPapersShowBoard{
+  padding: 0px 40px;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper{
+  box-sizing: border-box;
+  float: left;
+  width: 200px;
+  height: 285px;
+  padding-top: 5px;
+  margin: 40px 0px 0px 75px;
+  border: solid 1px black;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper:first-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: dashed;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper:last-child{
+  margin-bottom: 40px;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper > .testPaperTitle{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  width: 160px;
+  height: 68px;
+  margin: 3px auto 0px;
+  border-bottom: solid black 1px;
+  font-weight: bolder;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper > .testPaperTitle > div{
+  flex-basis: 160px;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper > .testPaperTitle > div:nth-child(2),
+.testPapersBoards > .testPapersShowBoard > .testPaper > .testPaperTitle > div:nth-child(3){
+  font-size: 12px;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper > .testPaperTitle > div:nth-child(3){
+  margin-bottom: 10px;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper > .testPaperName{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  padding: 10px 20px;
+  font-size: 16px;
+  word-break: break-all;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper > .testPaperComment{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  width: 160px;
+  height: 55px;
+  margin: 0px auto;
+  border-top: solid 1px black;
+  font-size: 14px;
+}
+
+.testPapersBoards > .testPapersShowBoard > .testPaper:hover{
+  border: solid 1px black;
+  box-shadow: 0px 0px 3px black;
+}
+
+.testPapersBoards > .testPaperControlBoard{
+  position: fixed;
+  top: 0px;
+  width: 980px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.testPapersBoards > .testPaperControlBoard > .controlNewTestPaperOrModifyName,
+.testPapersBoards > .testPaperControlBoard > .controlOldTestPaper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-evenly;
+  width: 300px;
+  height: 100px;
+  margin: 200px auto;
+  background-color: transparent;
+  border: 1px black solid;
+}
+
+.testPapersBoards > .testPaperControlBoard > .controlNewTestPaperOrModifyName > *,
+.testPapersBoards > .testPaperControlBoard > .controlOldTestPaper > *{
+  box-sizing: border-box;
+  width: 250px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px black solid;
+  outline: none;
+}
+
+.testPapersBoards > .testPaperControlBoard > .controlNewTestPaperOrModifyName > button:hover,
+.testPapersBoards > .testPaperControlBoard > .controlOldTestPaper > button:hover{
+  color: white;
+  background-color: black;
+}
+
+.testPapersBoards > .testPaperControlBoard > .controlNewTestPaperOrModifyName > button{
+  width: 100px;
+  height: 26px;
+}
+
+.testPapersBoards > .testPaperControlBoard > .controlOldTestPaper{
+  margin-top: 150px;
+  height: 300px;
+}

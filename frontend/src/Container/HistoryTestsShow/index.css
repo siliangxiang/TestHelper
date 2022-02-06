@@ -1,0 +1,26 @@
+.historyTestsShow{
+  width: 80%;
+  margin: 0px auto;
+}
+
+.historyTestsShow > .test{
+  display: flex;
+  height: 50px;
+  margin: 30px auto;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.historyTestsShow > .test:hover{
+  background-color: black;
+  color: white;
+}
+
+.historyTestsShow > .test > :first-child{
+  width: 50%;
+}
+
+.historyTestsShow > .test > :last-child{
+  width: 50%;
+}

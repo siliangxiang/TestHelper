@@ -1,0 +1,186 @@
+/* 老师的测验准备界面 */
+.teacherPrepare{
+  width: 800px;
+  min-height: 500px;
+  margin: 40px auto 0px;
+  border: solid black 1px;
+  background-color: white;
+}
+
+.teacherPrepare > :first-child{
+  height: 50px;
+  border-bottom: solid black 1px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 23px;
+}
+
+.teacherPrepare > :first-child > span{ color: red; }
+
+.teacherPrepare > :last-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  min-height: 300px;
+  margin: 20px auto;
+  font-size: 23px;
+}
+
+/* 学生准备界面 */
+@keyframes examineesRun{
+  0%{ background-position: 0px 0px; }
+  20%{ background-position: -256px 0px; }
+  40%{ background-position: -512px 0px; }
+  60%{ background-position: -768px 0px; }
+  80%{ background-position: -1024px 0px; }
+  100%{ background-position: -1280px 0px; }
+}
+
+.studentPrepare{
+  width: 256px;
+  height: 256px;
+  margin: 80px auto;
+  background-image: url('./studentPrepareBackground.png');
+  animation-name: examineesRun;
+  animation-timing-function: steps(1);
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* 测验进行中 */
+.testGoing{
+  width: 800px;
+  padding: 20px 20px 30px 20px;
+  margin: 30px auto;
+  border: solid 1px black;
+  background-color: white;
+  font-size: 22px;
+}
+
+/* 题干 */
+.testGoing > .name{
+  word-break: break-all;
+}
+
+/* 辅助材料 */
+.material{
+  width: 700px;
+  height: 400px;
+  margin: 20px auto 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* 选项 */
+.testGoing > .choices{
+  width: 100%;
+  margin: 10px auto 0px;
+}
+
+.testGoing > .choices > .choice{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.testGoing > .choices > .choice > span{
+  width: 15px;
+  text-align: center;
+}
+
+.testGoing > .choices > .choice > div{
+  width: 735px;
+}
+
+.choices > .choice > input{
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  border: 1px solid black;
+}
+
+/* 测验结束 */
+.testEnd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 400px;
+  margin: 30px auto;
+  border: black solid 1px;
+  background-color: white;
+}
+
+.testEnd > span{
+  font-size: 25px;
+}
+
+.testEnd > span > span{
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 980px) {
+  .studentPrepare{
+    margin: 80rem auto;
+  }
+
+  /* 测验进行中 */
+  .testGoing{
+    box-sizing: border-box;
+    width: 300rem;
+    padding: 20rem 20rem 30rem 20rem;
+    margin: 30rem auto;
+    border: solid 1rem black;
+    background-color: white;
+    font-size: 22rem;
+  }
+
+  /* 辅助材料 */
+  .material{
+    width: 100%;
+    height: 250rem;
+    margin: 20rem auto 0rem;
+  }
+
+  /* 选项 */
+  .testGoing > .choices{
+    margin: 10rem auto 0rem;
+  }
+
+  .testGoing > .choices > .choice{
+    margin-top: 20rem;
+  }
+
+  .testGoing > .choices > .choice > span{
+    width: 8%;
+  }
+
+  .testGoing > .choices > .choice > div{
+    width: 80%;
+  }
+
+  .testGoing > .choices > .choice > input{
+    width: 10%;
+    height: 20rem;
+    border: 1rem solid black;
+  }
+
+  /* 测验结束 */
+  .testEnd{
+    box-sizing: border-box;
+    width: 300rem;
+    height: 300rem;
+    margin: 30rem auto;
+    padding: 0rem 20rem;
+    border: black solid 1rem;
+    text-align: center;
+  }
+
+  .testEnd > span{
+    font-size: 25rem;
+  }
+}

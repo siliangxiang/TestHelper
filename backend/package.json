@@ -1,0 +1,42 @@
+{
+  "name": "express-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint src/*.js",
+    "comment1": "esm为ES6的模块加载器。-r译为递归。",
+    "start": "nodemon -r esm src/server.js --ignore database.json",
+    "comment2": "rimraf为node版本的UNIX的“rm -rf”命令。",
+    "comment3": "rm（删除文件或文件夹），-r（递归地）f（无提示地）",
+    "reset": "npx rimraf database.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-lock": "^1.2.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodejs-websocket": "^1.7.2",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.6.1",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "jest": "^26.6.0"
+  }
+}
