@@ -43,6 +43,7 @@ class TestResults extends Component {
       rawQuestions = (await axios.get(`/admin/quiz/${testPaperId}`)).data.questions;
     } catch (error) { return replace('/testPapersShow') }
     if (!rawResults.length) return this.setState({ noExaminees: true }); // 无考生参加
+    rawQuestions = rawQuestions.slice(0, rawResults[0].answers.length); // 防止在测验后新加的题目带来的bug
     const range = rawResults.map(examineeResults => [ // 统计学生的排名, 包含每人的分数和耗时
       examineeResults.name,
       ...examineeResults.answers.reduce((pre, result, i) => [
